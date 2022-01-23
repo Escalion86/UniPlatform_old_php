@@ -49,6 +49,6 @@
 .primary {
   color: var(--primary);
 
-  border: 1px solid ver(--primary);
+  border: 1px solid var(--primary);
   background: none;
 }
