@@ -21,7 +21,7 @@ export interface ProductModel {
   price: number
   credit: number
   oldPrice: number
-  description:string
+  description: string
   characteristics: ProductCharacteristic[]
   createdAt: Date
   updatedAt: Date
@@ -31,5 +31,6 @@ export interface ProductModel {
   reviews: ReviewModel[]
   reviewCount: number
   reviewAvg?: number
-  advantages: string
+  advantages?: string
+  disadvantages?: string
 }

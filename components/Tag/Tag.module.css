@@ -22,7 +22,7 @@
 }
 
 .ghost {
-  border: 1px solid ver(--gray-light);
+  border: 1px solid var(--gray-light);
 }
 
 .red {

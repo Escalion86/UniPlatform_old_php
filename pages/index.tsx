@@ -2,13 +2,13 @@
 // import Image from 'next/image'
 import { GetStaticProps } from 'next'
 import { useState } from 'react'
-import { Button, Htag, P, Rating, Tag  } from '../components'
+import { Button, Htag, Input, P, Rating, Tag, Textarea } from '../components'
 import { Layout, withLayout } from '../layout/Layout'
 import axios from 'axios'
 import { MenuItem } from '../interfaces/menu.interface'
 
-function Home({menu} : HomeProps): JSX.Element {
-  const [rating,setRating] = useState<number>(4)
+function Home({ menu }: HomeProps): JSX.Element {
+  const [rating, setRating] = useState<number>(4)
   return (
     <>
       {/* <Head>
@@ -18,16 +18,23 @@ function Home({menu} : HomeProps): JSX.Element {
       </Head> */}
       <Htag tag="h1">Заголовок</Htag>
       <Button appearance="primary">Кнопка</Button>
-      <Button appearance="ghost" arrow='right'>Кнопка</Button>
-      <P size='l'>Большой</P>
+      <Button appearance="ghost" arrow="right">
+        Кнопка
+      </Button>
+      <P size="l">Большой</P>
       <P>Средний</P>
-      <P size='s'>Маленький</P>
+      <P size="s">Маленький</P>
 
-      <Tag size='s'>Ghost</Tag>
-      <Tag size='m' color='red'>Red</Tag>
-      <Tag size='m' color='green'>Green</Tag>
+      <Tag size="s">Ghost</Tag>
+      <Tag size="m" color="red">
+        Red
+      </Tag>
+      <Tag size="m" color="green">
+        Green
+      </Tag>
       <Rating isEditable rating={rating} setRating={setRating} />
-      
+      <Input placeholder="тест" />
+      <Textarea placeholder="тест" />
     </>
   )
 }
@@ -36,18 +43,21 @@ export default withLayout(Home)
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const firstCategory = 0
-  const { data: menu }  = await axios.post<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', {
-    firstCategory
-  })
+  const { data: menu } = await axios.post<MenuItem[]>(
+    process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find',
+    {
+      firstCategory,
+    }
+  )
   return {
     props: {
       menu,
-      firstCategory
-    }
+      firstCategory,
+    },
   }
 }
 
-interface HomeProps extends Record<string, unknown>{
-  menu: MenuItem[],
+interface HomeProps extends Record<string, unknown> {
+  menu: MenuItem[]
   firstCategory: number
 }

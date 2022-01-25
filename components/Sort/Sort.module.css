@@ -3,12 +3,14 @@
 }
 
 .active {
-  font-weight: bold;
   color: var(--primary);
+
+  font-weight: bold;
 }
 
 .active .sortIcon {
   display: block;
+
   margin-right: 8px;
 }
 
@@ -23,7 +25,9 @@
   display: grid;
   grid-template-columns: 20px 1fr;
   gap: 8px;
+
   align-items: center;
+
   cursor: pointer;
 }
 
