@@ -1,18 +1,18 @@
 .header {
   display: none;
-
 }
 
 .mobileMenu {
   position: fixed;
   z-index: 10;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
-  padding: 20px 12px;
+  left: 0;
 
   overflow-y: scroll;
+
+  padding: 20px 12px;
 
   background: #F5F6F8;
 }
@@ -29,6 +29,7 @@
     display: grid;
     grid-template-columns: 1fr 40px;
     gap: 10px;
-    margin: 15px 15px 0 15px;
+
+    margin: 15px 15px 0;
   }
 }
