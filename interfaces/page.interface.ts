@@ -2,7 +2,7 @@ export enum TopLevelCategory {
   Courses,
   Services,
   Books,
-  Products
+  Products,
 }
 
 export interface TopPageAdvantage {
@@ -20,7 +20,6 @@ export interface HhData {
   updatedAt: Date
 }
 
-
 export interface TopPageModel {
   tags: string[]
   _id: string
@@ -30,8 +29,8 @@ export interface TopPageModel {
   category: string
   seoText?: string
   tagsTitle: string
-  meteTitle: string
-  metaDescription:string
+  metaTitle: string
+  metaDescription: string
   firstCategory: TopLevelCategory
   advantages?: TopPageAdvantage[]
   createdAt: Date

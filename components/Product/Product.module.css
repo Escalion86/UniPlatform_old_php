@@ -47,10 +47,6 @@
   margin-bottom: 20px;
 }
 
-.advBlock {
-  grid-column: middle /end;
-}
-
 .actions {
   grid-column: start / end;
 }
@@ -111,6 +107,7 @@
 .advBlock {
   font-size: 16;
   line-height: 22px;
+  grid-column: middle /end;
 }
 
 .advTitle {
