@@ -66,6 +66,7 @@ export const Rating = forwardRef(
       })
       setRatingArray(updatedArray)
     }
+
     const changeDisplay = (i: number) => {
       if (!isEditable) return
       constructRating(i)
