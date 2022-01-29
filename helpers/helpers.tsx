@@ -32,11 +32,13 @@ export const firstLevelMenu: FirstLevelMenuItem[] = [
   },
 ]
 
-export const priceRu = (price: number): string =>
+export const priceRu = (price: number | undefined): string =>
   price
-    .toString()
-    .replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
-    .concat(' ₽')
+    ? price
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+        .concat(' ₽')
+    : ''
 
 export const declOfNum = (
   number: number,
