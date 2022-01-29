@@ -4,10 +4,8 @@ module.exports = {
   },
   webpack(config, options) {
     config.module.rules.push({
-      // test: /\.svg$/i,
-      issuer: /\.[jt]sx?$/,
-      // use: ['@svgr/webpack'],
       loader: '@svgr/webpack',
+      issuer: /\.[jt]sx?$/,
       options: {
         prettier: false,
         svgo: true,
