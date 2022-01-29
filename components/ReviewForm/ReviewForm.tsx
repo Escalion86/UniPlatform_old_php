@@ -40,7 +40,7 @@ export const ReviewForm = ({
         setError('Что-то пошло не так')
       }
     } catch (e) {
-      setError(e.message)
+      setError((e as Error).message)
     }
   }
 
