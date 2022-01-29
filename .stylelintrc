@@ -5,6 +5,7 @@
     "color-hex-case": "upper",
     "selector-combinator-space-after": null,
     "selector-combinator-space-before": null,
+    "max-line-length": null,
     "selector-class-pattern": "^.*$",
     "string-quotes": "single",
     "no-missing-end-of-source-newline": null,
